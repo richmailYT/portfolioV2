@@ -22,11 +22,21 @@
 
         <div id="skills">
             <div class="wrapper">
-                <div>
-                    NodeJS
+                <div @mouseover="change_active_skill('nodejs', true)" @mouseleave="change_active_skill('nodejs', false)" class="skill" id="nodejs">
+                    <a class="text" :class="{ slide: skills['nodejs'].slide_2 }" href="https://nodejs.org" target="_blank">Node.js</a>
+
+                    <div class="div_1" :class="{ slide_1: skills['nodejs'].slide_1 }"></div>
+                    <div class="div_2" :class="{ slide_2: skills['nodejs'].slide_2 }">
+                        <img src="https://seeklogo.com/images/N/node-js-logo-F4F55CD2D0-seeklogo.com.png" alt="nodejs logo">
+                    </div>
                 </div>
-                <div>
-                    NodeJS
+                <div @mouseover="change_active_skill('socketio', true)" @mouseleave="change_active_skill('socketio', false)" class="skill" id="socketio">
+                    <a class="text" :class="{ slide: skills['socketio'].slide_2 }" href="https://socket.io" target="_blank">Socket.io</a>
+
+                    <div class="div_1" :class="{ slide_1: skills['socketio'].slide_1 }"></div>
+                    <div class="div_2" :class="{ slide_2: skills['socketio'].slide_2 }">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" alt="socketio logo">
+                    </div>
                 </div>
                 <div>
                     NodeJS

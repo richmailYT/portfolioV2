@@ -13,6 +13,19 @@
   --primary-comp: #232323;
   --text-light: #ccd6f6;
   --text-medium: #8892b0;
+  --nodejs-color: #215732;
+}
+
+.text {
+  position: relative;
+  z-index: 9;
+  right: 0px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.24, 0.87, 0.25, 1);
+}
+.text.slide {
+  right: -1rem;
 }
 
 #app {
@@ -61,6 +74,57 @@
   gap: 1rem;
   font-size: 22px;
 }
-#skills .wrapper > * {
-  padding: 5px 3rem;
+#skills .wrapper div {
+  padding: 10px 3rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#skills .wrapper .skill {
+  position: relative;
+  overflow: hidden;
+}
+#skills .wrapper .div_1, #skills .wrapper .div_2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: -250px;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.24, 0.87, 0.25, 1);
+}
+#skills .wrapper .div_2 img {
+  position: relative;
+  height: 2rem;
+  top: -5px;
+  left: -1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#skills .wrapper .slide_1, #skills .wrapper .slide_2 {
+  left: 0px;
+}
+#skills #nodejs {
+  background-color: rgba(33, 87, 50, 0.25);
+}
+#skills #nodejs .div_1 {
+  background-color: rgba(33, 87, 50, 0.5);
+}
+#skills #nodejs .div_2 {
+  background-color: #215732;
+}
+#skills #socketio {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+#skills #socketio a {
+  color: #fff;
+}
+#skills #socketio a.slide {
+  color: #000;
+}
+#skills #socketio .div_1 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#skills #socketio .div_2 {
+  background-color: white;
 }/*# sourceMappingURL=index.css.map */

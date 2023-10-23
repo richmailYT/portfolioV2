@@ -15,16 +15,28 @@ const app = Vue.createApp({
                 return;
             }
 
-             if (bool == true) {
+            if (bool == true) {
+                if (this.skills[skill].slide_1 == bool) {
+                    return;
+                }
                 this.skills[skill].slide_1 = bool;
             } else {
+                if (this.skills[skill].slide_2 == bool) {
+                    return;
+                }
                 this.skills[skill].slide_2 = bool;
             }
 
             setTimeout(() => {
                 if (bool == false) {
+                    if (this.skills[skill].slide_1 == bool) {
+                        return;
+                    }
                     this.skills[skill].slide_1 = bool;
                 } else {
+                    if (this.skills[skill].slide_2 == bool) {
+                        return;
+                    }
                     this.skills[skill].slide_2 = bool;
                 }
             }, 200)

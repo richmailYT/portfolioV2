@@ -88,7 +88,16 @@ header #contacts {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  gap: 0.3rem;
   background-color: var(--primary-comp);
+}
+header #contacts .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+header #contacts .contact input {
+  cursor: pointer;
 }
 
 #skills {

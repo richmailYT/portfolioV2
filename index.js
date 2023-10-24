@@ -1,8 +1,18 @@
 const app = Vue.createApp({
     data() {
-        const skills = { nodejs: { slide_1: false, slide_2: false }, socketio: { slide_1: false, slide_2: false } }
+        const skills_array = [ "nodejs", "socketio", "vue3" ];
+        const skills = new Object();
+
+        for (let i = 0; i < skills_array.length; i++) {
+            skill = skills_array[i]
+            skills[skill] = new Object();
+            skills[skill].slide_1 = false;
+            skills[skill].slide_2 = false;
+        }
+        
         return {
-            skills
+            skills,
+            skills_array
         }
     },
     methods: {

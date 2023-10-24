@@ -6,14 +6,21 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
+    letter-spacing: 0.5px;
     font-size: 1.2rem;
+
+    border-radius: var(--border-radius);
 }
 
 :root {
     --primary: #1d1d1d;
     --primary-comp: #232323;
 
+<<<<<<< HEAD
     --secondary: #2F2F2F;
+=======
+    --secondary: #333333;
+>>>>>>> 7e03caf6f371aa0616dab9934b1343cc393d5102
 
     --text-light: #ccd6f6;
     --text-medium: #8892b0;
@@ -21,6 +28,10 @@
     --border-radius: 10px;
 
     --nodejs-color: #215732;
+}
+
+html, body {
+    background-color: var(--primary);
 }
 
 .text {
@@ -57,6 +68,7 @@
     justify-content: center;
     gap: 5rem;
 
+    border-radius: 0px;
     background-color: var(--primary);
 }
 
@@ -74,6 +86,7 @@ header {
         gap: 10px;
         padding: 1rem 3rem;
     
+
         border-radius: var(--border-radius);
         background-color: var(--primary-comp);
     
@@ -102,8 +115,19 @@ header {
         flex-direction: column;
 
         padding: 1rem;
+        gap: 0.3rem;
 
         background-color: var(--primary-comp);
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+
+            input {
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -126,12 +150,17 @@ header {
             width: 100%;
             height: 100%;
 
+
+
             border-radius: var(--border-radius);
         }
 
         .skill {
             position: relative;
             overflow: hidden;
+
+            display: flex;
+            justify-content: center;
         }
 
         .div_1, .div_2 {
@@ -195,6 +224,26 @@ header {
             background-color: rgba(#fff, 1);
         }
     }
+
+    #vue3 {
+        //#3C873A
+        a {
+            color: #fff;
+
+            &.slide {
+                color: #000;
+            }
+        }
+        background-color: rgba(#19975e, 0.25);
+
+        .div_1 {
+            background-color: rgba(#19975e, 0.5);
+        }
+
+        .div_2 {
+            background-color: rgba(#19975e, 1);
+        }
+    }
 }
 
 #gallery {
@@ -212,9 +261,11 @@ header {
     .site {
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         gap: 1rem;
         padding: 1rem;
+<<<<<<< HEAD
         border-radius: var(--border-radius);
         background-color: var(--primary-comp);
 
@@ -222,14 +273,38 @@ header {
             padding: 0.5rem;
             border-radius: var(--border-radius);
             background-color: var(--secondary);
+=======
+        gap: 1rem;
+        background-color: var(--primary-comp);
+
+        a {
+            width: fit-content;
+            padding: 0.5rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+
+            transition: all 100ms linear;
+            color: var(--text-medium);
+
+
+            border-radius: var(--border-radius);
+            background-color: var(--secondary);
+
+            &:hover {
+                color: var(--text-light);
+            }
+>>>>>>> 7e03caf6f371aa0616dab9934b1343cc393d5102
         }
 
         img {
-            display: block;
-            max-width: 200px;
-            max-height: 300px;
-            width: auto;
-            height: auto;
+            height: 300px;
+            width: 100%;
+            margin: auto;
+            object-fit: cover;
+
+
+
+            border-radius: var(--border-radius);
         }
     }
 }

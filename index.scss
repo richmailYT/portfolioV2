@@ -16,6 +16,8 @@
     --text-light: #ccd6f6;
     --text-medium: #8892b0;
 
+    --border-radius: 10px;
+
     --nodejs-color: #215732;
 }
 
@@ -33,6 +35,17 @@
     }
 }
 
+.input {
+    padding: 10px;
+    color: white;
+
+    border-radius: var(--border-radius);
+
+    border: 2px solid #3656ff;
+
+    background-color: #2F2F2F;
+}
+
 #app {
     padding-top: 3rem;
 
@@ -46,34 +59,49 @@
 }
 
 
-#introduction {
+header {
     display: flex;
     flex-direction: row;
+
     margin: auto;
-
-    gap: 10px;
-    padding: 1rem 3rem;
-
-    border-radius: 10px;
-    background-color: var(--primary-comp);
-
-    img {
-        border-radius: 50%;
-    }
-
-    .wrapper {
+    gap: 1rem;
+    #introduction {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    
         gap: 10px;
-
-        h1 {
-            color: var(--text-light);
-            font-size: 2rem;
+        padding: 1rem 3rem;
+    
+        border-radius: var(--border-radius);
+        background-color: var(--primary-comp);
+    
+        img {
+            border-radius: 50%;
         }
     
-        span {
-            color: var(--text-medium);
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            h1 {
+                color: var(--text-light);
+                font-size: 2rem;
+            }
+        
+            span {
+                color: var(--text-medium);
+            }
         }
+    }
+
+    #contacts {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem;
+
+        background-color: var(--primary-comp);
     }
 }
 
@@ -96,7 +124,7 @@
             width: 100%;
             height: 100%;
 
-            border-radius: 10px;
+            border-radius: var(--border-radius);
         }
 
         .skill {

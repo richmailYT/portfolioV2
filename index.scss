@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     color: white;
     letter-spacing: 0.5px;
     font-size: 1.2rem;
@@ -245,9 +245,10 @@ header {
 #gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
 
     padding: 1rem 10rem;
+    gap: 1rem;
 
     justify-content: center;
     align-items: center;
@@ -272,12 +273,11 @@ header {
             transition: all 100ms linear;
             color: var(--text-medium);
 
-
             border-radius: var(--border-radius);
             background-color: var(--secondary);
 
             &:hover {
-                color: var(--text-light);
+                color: #fff;
             }
         }
 
@@ -286,8 +286,6 @@ header {
             width: 100%;
             margin: auto;
             object-fit: cover;
-
-
 
             border-radius: var(--border-radius);
         }

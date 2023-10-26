@@ -1,6 +1,6 @@
 const app = Vue.createApp({
     data() {
-        const skills_array = [ "nodejs", "socketio", "vue3" ];
+        const skills_array = [ "nodejs", "socketio", "vue3", "mongodb", "expressjs", "puppeteer" ];
         const skills = new Object();
 
         for (let i = 0; i < skills_array.length; i++) {

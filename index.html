@@ -11,6 +11,12 @@
 </head>
 <body>
     <div id="app">
+        <nav id="nav">
+            <ul>
+                <li><a href="#payment">Payment methods</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
         <header>
             <div id="introduction">
                 <img src="https://cdn.discordapp.com/avatars/705244213414985758/595e25215f3b7195b8e98b887e728f12.webp?size=160" alt="profile picture">
@@ -23,54 +29,87 @@
             <div id="contacts">
                 <div class="contact">
                     <span>Discord</span>
-                    <input @click='open_link("https://www.educative.io/")' class="input" value="eofr" disabled>
+                    <div class="wrapper">
+                        <img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Emblem.png" alt="discord">
+                        <input class="input" value="eofr" readonly>
+                    </div>
+                </div>
+                <div id="commision_status">
+                    <h2>Commision status: Closed</h2>
                 </div>
             </div>
         </header>
 
-
         <div id="skills">
-            <div class="wrapper">
-                <div @mouseover="change_active_skill('nodejs', true)" @mouseleave="change_active_skill('nodejs', false)" class="skill" id="nodejs">
-                    <a class="text" :class="{ slide: skills['nodejs'].slide_2 }" href="https://nodejs.org" target="_blank">Node.js</a>
+            <div @mouseover="change_active_skill('nodejs', true)" @mouseleave="change_active_skill('nodejs', false)" class="skill" id="nodejs">
+                <a class="text" :class="{ slide: skills['nodejs'].slide_2 }" href="https://nodejs.org" target="_blank">Node.js</a>
 
-                    <div class="div_1" :class="{ slide_1: skills['nodejs'].slide_1 }"></div>
-                    <div class="div_2" :class="{ slide_2: skills['nodejs'].slide_2 }">
-                        <img src="https://seeklogo.com/images/N/node-js-logo-F4F55CD2D0-seeklogo.com.png" alt="nodejs logo">
-                    </div>
-                </div>
-                <div @mouseover="change_active_skill('socketio', true)" @mouseleave="change_active_skill('socketio', false)" class="skill" id="socketio">
-                    <a class="text" :class="{ slide: skills['socketio'].slide_2 }" href="https://socket.io" target="_blank">Socket.io</a>
-
-                    <div class="div_1" :class="{ slide_1: skills['socketio'].slide_1 }"></div>
-                    <div class="div_2" :class="{ slide_2: skills['socketio'].slide_2 }">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" alt="socketio logo">
-                    </div>
-                </div>
-                <div @mouseover="change_active_skill('vue3', true)" @mouseleave="change_active_skill('vue3', false)" class="skill" id="vue3">
-                    <a class="text" :class="{ slide: skills['vue3'].slide_2 }" href="https://vuejs.org/" target="_blank">Vue3</a>
-
-                    <div class="div_1" :class="{ slide_1: skills['vue3'].slide_1 }"></div>
-                    <div class="div_2" :class="{ slide_2: skills['vue3'].slide_2 }">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="vue3 logo">
-                    </div>
-                </div>
-                <div>
-                    NodeJS
+                <div class="div_1" :class="{ slide_1: skills['nodejs'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['nodejs'].slide_2 }">
+                    <img src="https://seeklogo.com/images/N/node-js-logo-F4F55CD2D0-seeklogo.com.png" alt="nodejs logo">
                 </div>
             </div>
+            <div @mouseover="change_active_skill('socketio', true)" @mouseleave="change_active_skill('socketio', false)" class="skill" id="socketio">
+                <a class="text" :class="{ slide: skills['socketio'].slide_2 }" href="https://socket.io" target="_blank">Socket.io</a>
+
+                <div class="div_1" :class="{ slide_1: skills['socketio'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['socketio'].slide_2 }">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" alt="socketio logo">
+                </div>
+            </div>
+            <div @mouseover="change_active_skill('vue3', true)" @mouseleave="change_active_skill('vue3', false)" class="skill" id="vue3">
+                <a class="text" :class="{ slide: skills['vue3'].slide_2 }" href="https://vuejs.org/" target="_blank">Vue3</a>
+
+                <div class="div_1" :class="{ slide_1: skills['vue3'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['vue3'].slide_2 }">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="vue3 logo">
+                </div>
+            </div>
+            <div @mouseover="change_active_skill('mongodb', true)" @mouseleave="change_active_skill('mongodb', false)" class="skill" id="mongodb">
+                <a class="text" :class="{ slide: skills['mongodb'].slide_2 }" href="https://www.mongodb.com" target="_blank">MongoDB</a>
+
+                <div class="div_1" :class="{ slide_1: skills['mongodb'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['mongodb'].slide_2 }">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="Mongo DB logo">
+                </div>
+            </div>
+            <div @mouseover="change_active_skill('expressjs', true)" @mouseleave="change_active_skill('expressjs', false)" class="skill" id="expressjs">
+                <a class="text" :class="{ slide: skills['expressjs'].slide_2 }" href="https://expressjs.com/" target="_blank">ExpressJS</a>
+
+                <div class="div_1" :class="{ slide_1: skills['expressjs'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['expressjs'].slide_2 }">
+                    <img src="https://e7.pngegg.com/pngimages/925/447/png-clipart-express-js-node-js-javascript-mongodb-node-js-text-trademark.png" alt="express.js logo">
+                </div>
+            </div>
+            <div @mouseover="change_active_skill('puppeteer', true)" @mouseleave="change_active_skill('puppeteer', false)" class="skill" id="puppeteer">
+                <a class="text" :class="{ slide: skills['puppeteer'].slide_2 }" href="https://pptr.dev/" target="_blank">Puppeteer</a>
+
+                <div class="div_1" :class="{ slide_1: skills['puppeteer'].slide_1 }"></div>
+                <div class="div_2" :class="{ slide_2: skills['puppeteer'].slide_2 }">
+                    <img src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="puppeteer logo">
+                </div>
+            </div>
+            <div>
+                NodeJS
+            </div>
+        </div>
+
+        <div id="payment">
+            <h1>Payment methods</h1>
             <div class="wrapper">
                 <div>
-                    NodeJS
+                    <span>Litecoin</span>
+                    <img src="https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=026" alt="litecoin logo">
                 </div>
+    
                 <div>
-                    NodeJS
+                    <span>Bitcoin</span>
+                    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=026" alt="bitcoin logo">
                 </div>
+
                 <div>
-                    NodeJS
-                </div>
-                <div>
-                    NodeJS
+                    <span>Monero</span>
+                    <img src="https://cryptologos.cc/logos/monero-xmr-logo.svg?v=026" alt="monero logo">
                 </div>
             </div>
         </div>

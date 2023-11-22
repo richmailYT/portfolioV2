@@ -50,8 +50,11 @@ const app = Vue.createApp({
             }
 
             this.skills[skill].slide_playing = true;
-            for (let i = 0; i < 30; i++) {
-                await this.sleep(5);
+
+            let seconds = 0
+            while (seconds < 200) {
+                const elapsed = await this.sleep(10);
+                seconds += elapsed;
                 if (this.skills[skill].slide_stop == true) {
                     this.skills[skill].slide_stop = false;
                     this.skills[skill].slide_playing = false;

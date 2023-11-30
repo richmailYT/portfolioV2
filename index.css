@@ -329,6 +329,7 @@ header #commision_status {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
   padding: 1rem;
   gap: 1rem;
   background-color: var(--primary-comp);

@@ -1,0 +1,23 @@
+main .blog {
+  padding-top: 8rem;
+  background-image: url("https://cdn.pixabay.com/photo/2014/10/23/10/10/dollars-499481_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .blog .title_desc {
+  padding: 1rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: var(--secondary);
+}
+main .blog .title_desc .title {
+  color: var(--text-blue);
+}
+main .blog .title_desc .title:hover {
+  text-decoration: underline;
+}
+main .blog .title_desc .desc {
+  color: var(--text-medium);
+  font-size: 0.8rem;
+}/*# sourceMappingURL=index.css.map */

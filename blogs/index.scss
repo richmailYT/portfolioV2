@@ -1,0 +1,30 @@
+main {
+    .blog {
+        padding-top: 8rem;
+
+        background-image: url("https://cdn.pixabay.com/photo/2014/10/23/10/10/dollars-499481_1280.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .title_desc {
+            padding: 1rem;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            background-color: var(--secondary);
+
+            .title {
+                color: var(--text-blue);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .desc {
+                color: var(--text-medium);
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

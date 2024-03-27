@@ -1,11 +1,25 @@
-:root {
-    --primary: #1d1d1d;
-    --primary-comp: #232323;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
-    --secondary: #333333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+
+    border-radius: var(--border-radius);
+}
+
+:root {
+    --primary: #131516;
+
+    --secondary: #181a1b;
 
     --text-light: #ccd6f6;
     --text-medium: #8892b0;
+    --text-blue: #8ab4f8;
 
     --border-radius: 10px;
 }
@@ -69,4 +83,18 @@ a {
             }
         }
     }
+}
+
+//for blogs
+
+//"adblock detected: please disable it" message
+#FERufyQdmoXD {
+    display: block; //javascript will hide it if no adblock is detected
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    background: #D30000;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
 }

@@ -1,0 +1,64 @@
+a {
+    color: var(--text-blue);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    padding-left: calc(20dvw - 1rem);
+    padding-right: calc(20dvw - 1rem);
+    line-height: calc(1em + 0.725rem);
+
+    /* Headings */
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-blue);
+    }
+
+    /* Paragraphs */
+    p {
+        line-height: 1.5;
+        text-align: justify;
+        text-indent: 2rem; //add that indent at the start of the paragraph
+    }
+
+    /* Lists */
+    ul {
+        list-style-type: disc;
+        margin-left: 2rem;
+        margin-bottom: 1.5rem;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    /* Links */
+    a {
+        color: var(--text-blue);
+        text-decoration: underline;
+
+        &:hover {
+            color: #a0c4ff;
+        }
+    }
+
+    // divides up different topics
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding: 1rem;
+        background: var(--secondary);
+
+        border: 2px solid #2a2e31;
+    }
+}
